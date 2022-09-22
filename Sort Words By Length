@@ -1,0 +1,18 @@
+from words import words
+SortWordSized(words)
+print(words)
+
+def SortWordSized():
+    n = len(words)
+    ma=1
+    l=0
+
+
+    while len(words[n-1]) > ma-1: #will keep looping untill the length of the last is shorter than what was just checked
+        for i in range(n):
+            if len(words[i]) == ma: 
+                words[i], words[l] = words[l], words[i]
+                l = l+1
+
+        ma = ma + 1
+        i = l
